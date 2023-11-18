@@ -9,6 +9,8 @@ android-gradle = "8.1.4" # https://developer.android.com/studio/releases/gradle-
 androidxCore = "1.9.0"
 androidxComposeBom = "2023.10.01"
 activityCompose = "1.7.2"
+retrofit = "2.9.0"
+okhttp-logging = "4.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
@@ -17,6 +19,9 @@ androidx-compose-material = { group = "androidx.compose.material", name = "mater
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-moshi-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp-logging" }
 
 [plugins]
 android-app = { id = "com.android.application", version.ref = "android-gradle" }
