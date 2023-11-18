@@ -8,7 +8,7 @@ class PageMetaDTO(
     @field:Json(name = "current_page")
     val currentPage: Int,
     @field:Json(name = "next_page")
-    val nextPage: Int,
+    val nextPage: Int?,
     @field:Json(name = "per_page")
     val perPage: Int,
     @field:Json(name = "total_count")
