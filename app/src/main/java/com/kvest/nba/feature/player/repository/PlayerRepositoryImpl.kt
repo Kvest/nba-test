@@ -8,8 +8,11 @@ import com.kvest.nba.feature.team.repository.toPlayerModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.concurrent.CancellationException
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class PlayerRepositoryImpl(
+@Singleton
+class PlayerRepositoryImpl @Inject constructor(
     private val playerService: PlayerService,
 ) : PlayerRepository {
     override suspend fun getNextPlayersPage(

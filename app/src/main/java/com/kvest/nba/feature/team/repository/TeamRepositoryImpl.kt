@@ -4,8 +4,11 @@ import com.kvest.nba.api.TeamService
 import com.kvest.nba.feature.player.repository.toTeamModel
 import com.kvest.nba.feature.team.model.Team
 import java.util.concurrent.CancellationException
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class TeamRepositoryImpl(
+@Singleton
+class TeamRepositoryImpl @Inject constructor(
     private val teamService: TeamService,
 ) : TeamRepository {
     override suspend fun getTeam(teamId: Long): Result<Team> {
