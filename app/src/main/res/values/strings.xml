@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NBA-Test</string>
+    <string name="retry">Retry</string>
+    <string name="failed_load_players">Failed to load players list</string>
 </resources>

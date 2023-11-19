@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.androidx.compose.material)
     implementation(libs.paging.runtime)
     implementation(libs.paging.compose)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
 
     implementation(libs.retrofit)
     implementation(libs.retrofit.moshi.converter)
