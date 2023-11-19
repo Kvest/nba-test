@@ -28,7 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
@@ -39,21 +39,27 @@ import com.kvest.nba.ui.theme.Copper
 
 @Composable
 fun PlayersList(
+    showPlayerDetails: (playerId: Long) -> Unit,
     modifier: Modifier = Modifier,
-    playersListViewModel: PlayersListViewModel = viewModel()
+    playersListViewModel: PlayersListViewModel = hiltViewModel()
 ) {
     val playerItems: LazyPagingItems<Player> =
         playersListViewModel.uiState.collectAsLazyPagingItems()
 
-    PlayersList(modifier = modifier, playerItems = playerItems)
+    PlayersList(
+        showPlayerDetails = showPlayerDetails,
+        modifier = modifier,
+        playerItems = playerItems
+    )
 }
 
 @Composable
 fun PlayersList(
+    showPlayerDetails: (playerId: Long) -> Unit,
     modifier: Modifier = Modifier,
     playerItems: LazyPagingItems<Player>,
 ) {
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(modifier = modifier) {
         LazyColumn(modifier = Modifier.fillMaxSize()) {
             items(
                 count = playerItems.itemCount,
@@ -66,7 +72,7 @@ fun PlayersList(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(vertical = 8.dp)
-                            .clickable { /* TODO */ }
+                            .clickable { showPlayerDetails(player.id) }
                     )
                 }
             }

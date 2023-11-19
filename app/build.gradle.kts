@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.paging.runtime)
     implementation(libs.paging.compose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(libs.navigation.compose)
 
     implementation(libs.retrofit)
     implementation(libs.retrofit.moshi.converter)
@@ -63,4 +64,5 @@ dependencies {
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 }
