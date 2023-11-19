@@ -1,17 +1,21 @@
 package com.kvest.nba.feature.player.model
 
-class Player(
+class PlayerDetails(
     val id: Long,
     val firstName: String,
     val lastName: String,
     val position: String,
+    val heightFeet: Int?,
+    val heightInches: Int?,
+    val weightPounds: Int?,
+    val teamId: Long,
     val teamName: String,
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
-        other as Player
+        other as PlayerDetails
 
         if (id != other.id) return false
 

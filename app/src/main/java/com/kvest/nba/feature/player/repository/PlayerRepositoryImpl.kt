@@ -2,9 +2,8 @@ package com.kvest.nba.feature.player.repository
 
 import com.kvest.nba.api.PlayerService
 import com.kvest.nba.api.dto.PlayersListDTO
-import com.kvest.nba.feature.player.model.Player
+import com.kvest.nba.feature.player.model.PlayerDetails
 import com.kvest.nba.feature.player.model.PlayersPage
-import com.kvest.nba.feature.team.repository.toPlayerModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.concurrent.CancellationException
@@ -37,12 +36,12 @@ class PlayerRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getPlayer(playerId: Long): Result<Player> {
+    override suspend fun getPlayerDetails(playerId: Long): Result<PlayerDetails> {
         return try {
             val response = playerService.getPlayer(playerId)
 
             if (response.isSuccessful) {
-                val player = requireNotNull(response.body()).toPlayerModel()
+                val player = requireNotNull(response.body()).toPlayerDetailsModel()
 
                 Result.success(player)
             } else {

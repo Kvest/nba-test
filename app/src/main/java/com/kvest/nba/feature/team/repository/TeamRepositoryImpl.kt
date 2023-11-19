@@ -1,7 +1,6 @@
 package com.kvest.nba.feature.team.repository
 
 import com.kvest.nba.api.TeamService
-import com.kvest.nba.feature.player.repository.toTeamModel
 import com.kvest.nba.feature.team.model.Team
 import java.util.concurrent.CancellationException
 import javax.inject.Inject

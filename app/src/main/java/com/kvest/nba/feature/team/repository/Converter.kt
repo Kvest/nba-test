@@ -1,16 +1,14 @@
 package com.kvest.nba.feature.team.repository
 
-import com.kvest.nba.api.dto.PlayerDTO
-import com.kvest.nba.feature.player.model.Player
+import com.kvest.nba.api.dto.TeamDTO
+import com.kvest.nba.feature.team.model.Team
 
-fun PlayerDTO.toPlayerModel(): Player = Player(
+fun TeamDTO.toTeamModel(): Team = Team(
     id = this.id,
-    firstName = this.firstName,
-    lastName = this.lastName,
-    position = this.position,
-    heightFeet = this.heightFeet,
-    heightInches = this.heightInches,
-    weightPounds = this.weightPounds,
-    teamId = this.team.id,
-    teamName = this.team.name,
+    abbreviation = this.abbreviation,
+    city = this.city,
+    conference = this.conference,
+    division = this.division,
+    fullName = this.fullName,
+    name = this.name,
 )

@@ -180,6 +180,6 @@ fun PlayersListItem(
 @Preview
 @Composable
 fun PlayerListItemPreview() {
-    val player = Player(43, "Bennedict", "Mathurin", "G-F", null, null, null, 12, "Pacers")
+    val player = Player(43, "Bennedict", "Mathurin", "G-F",  "Pacers")
     PlayersListItem(player)
 }
