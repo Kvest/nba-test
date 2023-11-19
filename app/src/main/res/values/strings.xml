@@ -2,4 +2,9 @@
     <string name="app_name">NBA-Test</string>
     <string name="retry">Retry</string>
     <string name="failed_load_players">Failed to load players list</string>
+    <string name="failed_load_player_details">Failed to load information about player</string>
+
+    <string name="play_in">Play in %1$s</string>
+    <string name="player_height">Height %1$d feet %2$d inches</string>
+    <string name="player_weight">Height %1$d pounds</string>
 </resources>

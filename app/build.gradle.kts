@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.paging.runtime)
     implementation(libs.paging.compose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(libs.androidx.lifecycle.lifecycleCompose)
     implementation(libs.navigation.compose)
 
     implementation(libs.retrofit)
